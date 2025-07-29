@@ -1,0 +1,807 @@
+
+<html lang="ENG-UK">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Zero Orbit</title>
+        <link href="css/style.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pompiere&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="img/zo.png">
+        <meta name="msapplication-TileColor" content="#0c1624">
+        <meta name="theme-color" content="#0c1624">
+    </head>
+
+
+    <body>
+        <div class="content">
+            <h1>Front-End Study Repository</h1>
+
+            <div class="header">
+                <p>This site is a repository of introductory content in HTML, CSS and JavaScript, organised based on the course <a href="https://www.programaria.org/cursos-programaria/front-end-primeira-pagina-web/" target="_blank">"Front-End: Minha primeira página web!"</a> ("Front-End: My First Web Page", in English) promoted by Progra{M}aria.</p>
+                <p>The follwing section present the main concepts studies, accompanied by examples and fundamental structures of each language.</p>
+                <p>All content was created and written by me, a beginner in the field od development and programming. If you spot any mistakes or inaccuracies, feel free to let me know, at the bottom of the page, there will be a space for submitting feedback.</p>
+            </div>
+
+            <div class="summary">
+                <h2>Summary:</h2>
+                <nav class="main">
+                    <ul id="summary-list"></ul>
+                </nav>
+            </div>
+
+            <article id="js-content">
+                    <section id="internet">
+                        <h2>Internet ✶⋆.˚</h2>
+                        
+                            <div class="part1">
+                                <h3>What it the internet?</h3>
+                                    <p>They are submarine cables connected to serves located in data centres.</p>
+                                    <p>The internet is a global network of interconnected computers, which enables the exchange of data and information between devices anywhere in the world, through standdardised communication protocols, mainly TCP/IP.</p>
+                            
+                                <h4>Origin of the Internet</h4>
+                                    <p>The internet was created from ARPANET, developed in the United States in the late 1960s. Its original motivation was military: to ensure continuity of communication and acess to strategic information even in the event of attacks, such as a nuclear strike. Today, its use is vastly different, aimed at civilian and commercial purposes.</p>
+                                    <p>The internet as we know it today only emerged in the 1980s-1990s.</p>
+
+                                    <p>➜ ARPANET (Advanced Research Projects Agency Network): was the first packet-switching computer network in history and is considered the origin of the internet.</p>
+                           
+                                <h4>Most Common Terms</h4>
+                                <p>➜ <strong>Datacentre:</strong> is a physical facility designed to house critical computing systems, such as:</p>
+                                    <ul>
+                                        <li>Servers (high-perfomance computers);</li>
+                                        <li>Storage devices (HDs, SSDs);</li>
+                                        <li>Network equipment (routers, switches, firewalls);</li>
+                                        <li>Fontes de energia redundante e sistemas de resfriamento;</li>
+                                        <li>Main function: To store, process, and distribute data;</li>
+                                        <li>A datacentre is the physical heart of the internet. It's where the computers that store websites, apps, databases,email, videos, and al digital information circulatingglobally are located;</li>
+                                        <li>Examples of companies operating datacentres: Google, Amazon (AWS), Microsoft (Azure), Meta, IBM, Oracle.</li>
+                                    </ul>
+
+                                <p>➜ <strong>IP (Internet Protocol):</strong> is the protocol that enables locating, identifying and sending between devices on the internet. It is the addressing system of the global network.</p>
+                                <ul>
+                                    <li>Any machine connected to a network has an IP addres, a unique string of numbers used to identify the device on the network, like the Brazilian CPF! It looks like this: 74.125.19.147</li>
+                                        <li>Main function: To allow data to be sent from one device to another (computers, serves, routers, mobile phones) through unique addresses called IP adresses;</li>
+                                        <li>IP works alongside other protocols, especially:</li>
+                                            <ul>
+                                                <li>TCP (Transmission Control Protocol) → Ensures that data arrives complete and in the correct order.</li>
+                                                    <ul>
+                                                        <li>More secure - used for messages, for example. It guarantees that your message will be delivered.</li>
+                                                    </ul>
+                                                <li>DNS (Domain Name System) → Translates names like google.com into IP adresses.</li>
+                                                    <ul>
+                                                        <li>Faster - used for calls and voice transmissions, for example. No guarantee that the data will be delivered.</li>
+                                                    </ul>
+                                            </ul>
+                                    <li>It is one of the technical foundations of the internet.</li>
+                                </ul>
+
+                                <p>Currently, there are two versios of the Internet Protocol (IP): IPv4 and IPv6.</p>
+
+                                <p><strong>IPv4</strong> is the older version and still widely used. It uses 32-bit addresses, represented by four decimal number between 0 and 255, separated by dots. Such as <code>192.168.0.1</code> This structure allows for approximately 4.3 billions distinct addresses. With the rapid expansion of the internet and the growing number of the connected devices, this number has become insufficient.</p>
+                                <p><strong>IPv6</strong> was created to address this limitation. It uses 128-bit addresses, expressed in hexadecimal notation and separated by colons. Such as <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>. IPv6 supports aproximately <code>2¹²⁸</code> addresses, wich is about 340 undecillion - more than enough to meet current and future demand.</p>
+
+                                <p>In addiotion to the expansion od address space, IPv6 introduces other technical improvements:</p>
+                                    <ul>
+                                        <li><b>Automatic configuration:</b> in IPv4, a DHPC (Dynamic Host Configuration Protocol) server is usually required to assign addresses to devices. n IPv6, the stateless autoconfiguration (SLAAC) function allows the device itself to generate its own address automatically, reducing reliance on external servers and minising network traffic.</li>
+                                        <li><b>Security:</b> IPv6 was designed with native support for IPsec, a suite of protocols for authentication and encryption of data. Something optional and less standardised in IPv4.</li>
+                                        <li><b>More effecient routing:</b> the structure of IPv6 packets has been simplifield, allowing faster data processing by routers and better performance in complex networks.</li>
+                                    </ul>
+                        
+                                <h3>What is a website?</h3>
+                                    <p>A website is a set of files written in languages such as HTML, CSS and JavaScript, organised on a server, wich the browser interprets and displays to the user.</p>
+                                    <p>⎆ Coded files that are interpreted by browsers</p>
+
+                                <p>Languages that make up these files</p>
+                                    <ul>
+                                        <li><b>HTML</b> - Defines the structure of elements (text, headings, links)</li>
+                                        <li><b>CSS</b> - Defines apparence (colours, fonts, layout)</li>
+                                        <li><b>JavaScript</b> - Defines behavious and interactions (menus, forms, animations)</li>
+                                    </ul>
+
+                            <div class="part_quote">
+                                <blockquote>❝It's also worth distinguishing the Internet from the Web! Although we often use them as synonyms, it's important to understand that the Internet is the infrasstruture - the network of computers and devices that exchange information - and the Web is a service built using that infrastruture. Through the Internet, you access the Web via browsers, wich are responsible for requesting and displaying the information served/returned by servers. For example, torrents, instant messaging, and apps are other services that use the Internet's infrastructure but not necessarily the Web!❞ - Progra{M}aria</blockquote>
+                            </div>
+
+                                <h4>Simplifying</h4>
+                                    <p>When we search using browsers, send emails, or access recipes, we are requesting data stored on remote servers. These servers send us files composed of code (HTML, CSS, JavaScript, etc.), wich are interpreted by browsers and displayed as pages, text, images or videos.</p>
+                                    <p>Berfore reaching us, this data travels through a network of servers and routers, passing through various points until it reaches our device.</p>
+                            
+                                <h4>Where is this data stored?</h4>
+                                    <p>On servers locatde in datacentres around the world. Websites, emails, videos, searches, all are stored on these servers.</p>
+                            
+                                <h4>What happens when you search for something?</h4>
+                                    <ol>
+                                        <li>The browser sends a request to a server - Google's, for example;</li>
+                                        <li>This request is routed through the internet - passing through several devices (routers, services, cables);</li>
+                                        <li>When it reaches the correct server, it responds with files containing the search content;</li>
+                                        <li>These files, composed of programming code, are interpreted by the browser, which then display the content - the visual result.</li>
+                                    </ol>
+                            </div>
+                    </section>
+                    
+                    <section id="html">
+                        <h2>HTML ✶⋆.˚</h2>
+                            
+                            <h3>Introduction to HTML</h3>
+                                <h4>What is it?</h4>
+                                    
+                                    <p>HTML – HyperText Markup Language</p>
+
+                                    <p>HTML is the language used to structure the content of web pages. It defines the hierarchy and organisation of elements such as text, heading, lists, links, images, videos, and tables. <strong>It is the skeletonof the page.</strong></p>
+                
+                                    <p>It's important to note that HTML is not a programming language, but a markup language.</p>
+
+                                <h4>What is hipertext?</h4>
+
+                                    <p>Hypertext refers to a system of organising information in which documents are connected through links. These links allow the user to navigate from one part of a document to another, or between different documents entirely, without following a linear sequence.</p>
+
+                                    <p>In practical terms, hypertext enables a web page to contain not only plain text, but also other media like images, videos, and audio, all connected through hyperlinks . This allows for non-linear reading and dynamic, interactive user experience.</p>
+
+                                    <p>Technically, a hypertext document is just a text that contains embedded links. HTML is the standard language used to created such documents for the web. It allows authors to structure content and link it to other pages, making it the foundation of web navigation.</p>
+                        
+                                <h4>How does the structure of an HTML document work?</h4>
+                                    <p>An HTML document is organised in a hierarchial structure, which defines how elements relate to each other and are displayed on the page. The basic structure of an HTML document includes the following parts:</p>
+                                        <ol>
+                                            <li><b>Document type declaration:</b> &lt;!DOCTYPE html&gt; - informs the browser that this is an HTML document.</li>
+                                            <li><b>Root element:</b> &lt;html&gt; - wraps all the content of the page.</li>
+                                            <li><b>Head element:</b> &lt;head&gt; - contains metadata such as the title, links to stylesheets, and scripts.</li>
+                                            <li><b>Body element:</b> &lt;body&gt; - contains the visible content of the page, such as text, images, and link.</li>
+                                        </ol>   
+                                
+                                    <p>Example of a basic structure:</p>
+    <pre>
+    &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;Page title&lt;/title&gt;
+                &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;Welcome to my website!&lt;/h1&gt;
+                &lt;p&gt;This is a sample paragraph.&lt;/p&gt;
+                &lt;a href="https://www.example.com"&gt;Click here&lt;/a&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>      
+
+                                    <p>This structure is the foundation of any HTML page. From it, you can add more elements and customise the content.</p>
+                            
+                            
+                            <h3>HTML Tags</h3>
+
+                                <h4>What are they?</h4>
+
+                                    <p>HTML tags are fundamental elements of the language. They act like "labels"that indicate the role of each part of the content on a page - headings, paragraphs, lists, links, images, tables, among others.</p>
+
+                                    <p>Each tag is written between "less than" and "greater than" sings (< >). Most tags have an opening and a closing:</p>
+
+                                    <pre>&lt;p&gt;Desired text&lt;/p&gt;</pre>
+
+                                    <p>In the example above:</p>
+                                        <ul>
+                                            <li> &lt;p&gt; opens a paragraph; </li>
+                                            <li> &lt;/p&gt; closes the paragraph. </li>
+                                        </ul>
+
+                                    <p>The slash / insides the tag indicates the end of that element.</p>
+
+                                    <p>Not all tags require a closing. Some are called self-closing tags, such as &lt;img&gt; (image) and &lt;br&gt; (line break). These do not have internal content and used on their own.</p>
+
+                                    <p>HTML is made up almost entirely of tags, so it is essencial to know them well. For a full list:</p>
+                                        <div class="elementshtml">
+                                            <ul>
+                                                <li><a href='https://developer.mozilla.org/pt-BR/docs/Web/HTML/Reference/Elements' target="_blanke">HTML elements reference</a></li>
+                                            </ul>
+                                        </div>
+
+                                
+
+                                <h4>Main Tags and Their Functions</h4>
+
+                                    <p>Some of the main HTML tags you should know are:</p>
+                                    <ul>
+                                        <li><b>&lt;h1&gt; to &lt;h6&gt;:</b> Headings, from most important (h1) to least important (h6).</li>
+                                        <li><b>&lt;p&gt;:</b> Paragraph.</li>
+                                        <li><b>&lt;a&gt;:</b> Link (anchor).</li>
+                                        <li><b>&lt;img&gt;:</b> Image.</li>
+                                        <li><b>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;:</b> Unordered lists (ul), ordered lists (ol), and list items (li).</li>
+                                        <li><b>&lt;div&gt;:</b> Division or generic section.</li>
+                                        <li><b>&lt;span&gt;:</b> Span, used to style specific parts of text.</li>
+                                        <li><b>&lt;br&gt;:</b> Line break.</li>
+                                        <li><b>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;:</b> Table, table row, table cell, and table header.</li>
+                                    </ul>
+
+                                    <p>These tags are fundamental for structuring the content of an HTML page. You can combine and nest them to create complex layouts and organise information clearly.</p>
+
+                            <h3>Sematic Elements</h3>
+
+                                <h4>What They Are and Why They Matter</h4>
+
+                                    <p>Sematic elements are HTML tags that clearly describe the type of content they contain, going beyond mere visual structuring. They indicate the purpose and function of the content to browsers, screen readers, search engines, and other automated agents.</p> 
+                                    <p>The importance of semantic elements lies in several aspects:</p> 
+                                        <ul> 
+                                            <li><b>Accessibility:</b> screem readers and assistive devices interpret the content more effectivelly, providing more inclusive navigation for people with disabilities;</li> 
+                                            <li><b>SEO (Search Engine Optimisation):</b> search engines use semantics to understand the hierarchy and relevance of information, improving ranking in results;</li> 
+                                            <li><b>Code maintenance and readability:</b> makes the code more organised, readable, and easier for other developers to maintain;</li> 
+                                            <li><b>Future compatibility:</b> ensures the side follows modern web standards, making it easier to adapt to new technologies and browsers.</li> 
+                                        </ul> 
+                                    <p>Therefore, the correct use of semantic elements is essential for creating efficient, accessible, and optimised web pages.</p>
+
+                                    <h4>Main Examples:</h4>
+
+                                    <ul>
+                                        <li><b>&lt;header&gt;:</b> Page or section header.</li>
+                                        <li><b>&lt;nav&gt;:</b> Navigation, links to other pages or sections.</li>
+                                        <li><b>&lt;main&gt;:</b> Main content of the page.</li>
+                                        <li><b>&lt;article&gt;:</b> Independent article, such as blog post.</li>
+                                        <li><b>&lt;section&gt;:</b> Generic content section.</li>
+                                        <li><b>&lt;aside&gt;:</b> Related content, such as sidebar.</li>
+                                        <li><b>&lt;footer&gt;:</b> Page or section footer.</li>
+                                    </ul>
+
+                            <h3>HTML Attributes</h3>
+
+                                <h4>What are HTML Attributes?</h4>
+                                    
+                                    <p>HTML attributes are additional information that can be added to tags to modify their behaviour or provide extra details. They are written inside the opening tag, after the tag name.</p>
+                                    <p>Example:</p>
+                                        <pre class="href">
+    &lt;a href="https://www.example.com" target="_blank"&gt;Click here&lt;/a&gt;
+                                        </pre>
+
+                                    <p>In the example above, the &lt;a&gt; (link) tag has two attributes:</p>
+                                        <ul>
+                                            <li>href: Defines the link's address;</li>
+                                            <li>target: Specifies where the link will open (in this case, in a new tab).</li>
+                                        </ul>   
+
+                                <h4>What Are the Main Atributes?</h4>
+                                    <p>Some of the main HTML attributes you should know are:</p>
+                                    <ul>
+                                        <li><b>id:</b> Unique identifier for the element;</li>
+                                        <li><b>class:</b> CSS class for styling;</li>
+                                        <li><b>style:</b> Inline style for the element;</li>
+                                        <li><b>src:</b> Source of an image or script;</li>
+                                        <li><b>alt:</b> Alternative text for images;</li>
+                                        <li><b>href:</b> Address of a link;</li>
+                                        <li><b>target:</b> Specifies where the link will open (e.g. <code>_blank</code> to open a new tab);</li>
+                                        <li><b>title:</b> Descriptive text displayed when hovering over the element;</li>
+                                        <li><b>lang:</b> Defines the content language;</li>
+                                    </ul>       
+
+                                    <p>These attributes are widely used for styling, accessibility, and functionality of HTML elements. You can combine them as needed to meet the requirements of your project.</p>
+
+                                    <h5>More Details</h5>
+
+                                        <div class="part10">
+                                            <p><b>Link:</b></p>
+                                                <ul>
+                                                    <li>Tag used to link an external resourse to the HTML</li>
+                                                    <li>It has no closing tag (&lt;/link&gt;) because it is a self-contained (self-closing)</li>
+                                                    <li>It's not only for CSS - it is also used for icons, external fonts, etc.</li>
+                                                </ul>
+
+                                            <p><b>rel Attribute:</b></p>
+                                                <ul>
+                                                    <li>Means "<strong>Rel</strong>ationship"</li>
+                                                    <li>Specifies the relationship between the HTML and the linked file.</li>
+                                                    <li><b>Example:</b> rel="stylesheet” → indicates that external files is a CSS stylesheet.</li>
+                                                </ul>
+
+                                            <p><b>href Attribute:</b></p>
+                                                <ul>
+                                                    <li>Stands for "<strong>h</strong>yperlink <strong>ref</strong>erence"</li>
+                                                    <li>Points to the location of the CSS file to be used.</li>
+                                                    <li><b>Example:</b> href:"style.css” → the browser will look for a file called style.css in the same folder as the HTML file.</li>
+                                                </ul>
+
+                                            <p><b>Stylesheet:</b></p>
+                                                <ul>
+                                                    <li>Tell the browser: "the file I'm linking is a CSS style sheet". That is, the browser understands that the content of this files should be used to styles the HTML page (colours, donts, sizes, etc.)</li>
+                                                    <li><b>IMPORTANT!</b> 
+                                                        If you replace stylesheet with any other word, the browser will not aplly the CSS because it will not recognise the type of relationship.</li>
+                                                </ul>
+
+                                            <p><b>target Attribute:</b></p>
+                                                <ul>
+                                                    <li>Specifies where the link should open</li>
+                                                    <li><b>Example:</b> target="_blank" → opens the link in a new browser tab.</li>
+                                                </ul>
+
+                                            <p><b>Simplifying:</b></p>
+                                                <ul>
+                                                    <li><b>link :</b> Tag used to link an external resource to HTML;</li>
+                                                    <li><b>stylesheet :</b> CSS style file;/li>
+                                                    <li><b>rel :</b> Defines the relationship between HTML and the external file;</li>
+                                                    <li><b>href :</b> Path to the CSS file;</li>
+                                                    <li><b>target :</b> Where the link will open.</li>
+                                                </ul>
+                                        </div>
+                                        
+
+                            <h3>Best Pratices for Writing HTML</h3>
+
+                                <p>Writing clean and organised HTML code is essencial to facilitate maintenance and understanding pf the project. Moreover, it ensures your site is accessible and properly interpreted by browsers and search engines.</p>
+                                <p>Some good pratices include:</p>
+                                <ul>
+                                    <li>Using semantic tags whenever possible, to improve accessibility and content comprehension;</li>
+                                    <li>Organising the code with proper indentation to aind readability;</li>
+                                    <li>Closing tags correctly to avoid rendering issues;</li>
+                                    <li>Section-based organisation;</li>
+                                    <li>Using comments to explain parts of the code, if necessary;</li>
+                                    <li>Avoiding excessive use of inline tags, preferring classes and IDs for styling;</li>
+                                    <li>Using alt attributes in images to improve accessibility;</li>
+                                </ul>
+
+                                <h4>Code Organisation</h4>
+                                    <p>Well-organised code makes it easier to read, maintain and collaborate with other. Structure elements ins a clear hierarchy, group related content, and avoid unnecessary duplication. Each section od the page should have a specific and weel defined function, with appropriate use of &lt;div&gt;, &lt;section&gt;, &lt;article&gt;, among others.</p>
+
+
+                                <h4>Proper Use of Semantic Tags</h4>
+                                    <p>Avoid using &lt;div&gt; ou &lt;span&gt; for everything. Prefer semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt; e &lt;footer&gt;. These inform the browser and other agents about the role of each piece of content, improving accessibility, SEO, and the site's structure.</p>
+
+                                <h4>Indentation</h4>
+                                    <p>Proper indetation, with two or four spaces per level, helps visualise the hierarchy of elements. All child content should be indented relative to its parent element. This makes the code more readable and reduces the likelihood of tag-closing errors.</p>
+
+                                    <p>Example:</p>
+
+                                    <pre>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+                                    </pre>
+
+                            <p>Note: Well-written and organised code improves SEO (Search Engines Optimization), as search engines can better understand the page content. If your code contains errors, the browser may not render the page correctly or may even penalise you in search rankings.</p>
+
+                            <p>Learn more about HTML at:</p>
+                            
+                            <div class="linkhtml">
+                                <ul>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content" target="_blank">HTML: Creating the content</a></li>
+                                </ul>
+                            </div>
+                    </section>
+
+                    <section id="css">
+                        <h2>CSS ✶⋆.˚</h2>
+
+                            <h3> Introduction CSS</h3>
+
+                                <h4>What is CSS?</h4>
+                                    <p>CSS – Cascading Style Sheets</p>   
+
+                                    <p>CSS is the language used to style and format the content of HTML pages. It defines how elements should be displayed, including colours, fonts, spacing, and layout. It is responsible for the visual appearance of the page.</p>
+                                    <p>important: CSS is not a programming language either. It is a styling language, used solely to define the visual presentation of content.</p>
+
+                                <h4>How does it work?</h4>
+
+                                    <p>CSS work by applying styling rules to HTML elements. These rules are made up of selectors and declarations, which determine which elements are styled and how.</p>
+                                    <p>Example of a CSS rule:</p>
+                                        <pre>
+        h1 {
+            color: blue;
+            font-size: 24px;
+        }
+                                        </pre>
+
+                                        <p>In the example above:</p>
+                                            <ul>
+                                                <li><code>h1</code> is the selector, indicating that the rule applies to all &lt;h1&gt; elements;</li>
+                                                <li><code>color: blue;</code> is a declaration that sets the text color to blue;</li>
+                                                <li><code>font-size: 24px;</code> is another declaration that sets the font size to 24 pixels.</li>
+                                            </ul>
+
+                                        <p>CSS rules can be applied to any HTML element, allowing you to customise the appearence of text, images, links, tables, and much more.</p> 
+
+                                        <p>The most common CSS properties include:</p>
+                                            <ul>
+                                                <li><b>color;</b></li>
+                                                <li><b>background-color;</b></li>
+                                                <li><b>font-size;</b></li>
+                                                <li><b>font-family;</b></li>
+                                                <li><b>margin;</b></li>
+                                                <li><b>padding;</b></li>
+                                                <li><b>border;</b></li>
+                                                <li><b>width e height;</b></li>
+                                            </ul>
+
+                                <h4>How to include it in an HTML document?</h4>
+
+                                    <p>Adding CSS to an HTML document can be done in three main ways:</p>
+                                    <ol>
+                                        <li><b>Inline:</b> Adding styles directly within the HTML tah using the <code>style</code> attribute.</li>
+                                            
+                                        <pre>
+        &lt;h1 style="color: blue; font-size: 24px;"&gt;Title&lt;/h1&gt;
+                                        </pre>
+
+                                        <li><b>Internal:</b> Including a block of styles inside the HTML <code>&lt;head&gt;</code> tag.</li>
+                                            <pre>
+        &lt;head&gt;
+            &lt;style&gt;
+                h1 {
+                    color: blue;                    
+                    font-size: 24px;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;           
+                                            </pre>
+                                        <li><b>External:</b> Creating a separate CSS file and linking it to the HTML.</li>
+                                            <pre>
+        &lt;head&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;/head&gt;
+                                            </pre>      
+                                    </ol>   
+
+                                    <p>The most recommended method is the external one, as it allows you to separate content (HTML) from presentation (CSS), making it easier to maintain and reuse styles across multiple pages.</p>
+
+                            <h3>Selectors</h3>  
+
+                                <p>CSS selectors are used to select which HTML elements will be styled. These are several types of selectors, each with its own purpose:</p>
+                                <ul>
+                                    <li><b>Type selectors</b> Select all elements of given type (e.g., h1, p, div).</li>
+                                    <li><b>Class selectors:</b> Select elements with a specific class (e.g., .my-classe).</li>
+                                    <li><b>ID selectors:</b> Select an element with a specific ID (ex: #my-id).</li>
+                                    <li><b>Attributes selectors:</b> Select elements with a specific attribute (e.g., [type="text"]).</li>
+                                    <li><b>Combined selectors</b> Combine different selectors for greater precision (e.g., div.my-classe, h1#my-id).</li>
+                                </ul>
+
+                                <p>Example of selector usage:</p>
+                                    <pre>
+    p {
+        color: red;
+    }
+    .my-classe {
+        font-size: 20px;
+    }
+    #my-id {
+        background-color: yellow;
+    }
+                                    </pre>
+
+                                    <p>These selectors are used in HTML and later specified in CSS for styling.</p>
+
+                                    <p>Important: An ID must be unique on a page, whereas classes can be reused across multiple elements.</p>
+
+                            <h3>Units of measurement</h3>
+
+                                <p>CSS uses different units of measurement to define sizes, spacing, and proportions. The most common ones are:</p>
+                                <ul>
+                                    <li><b>px:</b> Pixels, a fixed unit based on screen resolution;</li>
+                                    <li><b>em:</b> Unit relative to the font size of the parente element;</li>
+                                    <li><b>rem:</b> Unit relative to the font size of the root element (html);</li>
+                                    <li><b>%:</b> Percentage, relative to the size of the parent element;</li>
+                                    <li><b>vh:</b> Viewport height, 1% of the height of the viewport window;</li>
+                                    <li><b>vw:</b> Viewport width, 1% of the width of the viewport window.</li>
+                                </ul>
+
+                                <p>Example of unit usage:</p>
+                                    <pre>
+    h1 {
+        font-size: 2em;
+        margin: 10px;
+    }
+    .container {
+        width: 80%;
+        height: 50vh;
+    }
+                                    </pre>
+
+                                <h3>Colours</h3>
+
+                                    <p>Colours in CSS can be defined in several ways:</p>
+                                    <ul>
+                                        <li><b>Colour names:</b></li>
+                                            <div class="list">
+                                            <ul>
+                                                <li><b>Limitations:</b> There are only 147 standard names.</li>
+                                                <li>No need to memorise, but not very flexible.</li>
+                                                <li><b>Pratical use:</b> Good for quick teste, but rarely used in professional projects.</li>
+                                                <li><b>Example:</b> red, blue, green, black, white, gray, orange, etc.</li>
+                                            </ul>
+    
+                                        <li><b>Hexadecimal codes:</b></li>
+                                            <ul>
+                                                <li><b>Format:</b> # followed by 6 hexadecimal digits (0-9, A-F);</li>
+                                                <li>Widely used in professional projects.</li>
+                                                <li><b>Example:</b> #FF0000 (red), #0000FF (blue);</li>
+                                            </ul>
+                    
+                                        <li><b>RGB:</b></li>
+                                            <ul>
+                                                <li><b>Format:</b> rgb(amount of red, amount of green, amount of blue);</li>
+                                                <li>Each value ranges from 0 to 255;</li>
+                                                <li>Allows for a wide range of colours;</li>
+                                                <li><b>Example:</b> rgb(255, 0, 0) is pure red, rgb(0, 255, 0) is pure green.</li>
+                                            </ul>
+                                            
+                                        <li><b>RGBA:</b></li>
+                                            <ul>
+                                                <li>Similar to RGB, but with a fourth value for opacity (0 to 1);</li>
+                                                <li>Allows you to set the transparency of the colour;</li>
+                                                <li><b>Example:</b> rgba(255, 0, 0, 0.5) is red with 50% opacity.</li>
+                                            </ul>
+                                           
+                                        <li><b>HSL:</b></li>
+                                            <ul>
+                                                <li><b>Format:</b> hsl(hue, saturation, lightness);</li>
+                                                <li>Hue varies from 0 to 360 degrees (colour wheel);</li>
+                                                <li>Saturation and lightness range from 0% to 100%;</li>
+                                                <li><b>Example:</b> hsl(0, 100%, 50%) is pure red, hsl(240, 100%, 50%) is pure blue.</li>
+                                            </ul>
+                                           
+                                        <li><b>HSLA:</li></b>
+                                            <ul>
+                                                <li>Similar to HSL, but with a fourth value for opacity (0 to 1);</li>
+                                                <li>Allows you to set the transparency of the colour;</li>
+                                                <li><b> Example: </b> hsla(0, 100%, 50%, 0.5) is red with 50% opacity.</li>
+                                            </ul>
+                                            </div>
+                                    </ul>       
+
+                                    <p>Example of using colours in CSS:</p>
+                                        <pre>
+    body {
+        background-color: #f0f0f0;
+    }
+    h1 {
+        color: rgb(255, 0, 0);
+    }
+    p {
+        color: rgba(0, 0, 255, 0.5);
+    }
+                                        </pre>
+                    </section>
+
+                                <h3>Box Model</h3>
+                                    <div class="boxmodel">
+                                        <p>The CSS box model is a fundamental concept that defines how HTML elements occupy space on the page. Every rendered element on a website is, in practice, a "box"made up of four layers:</p> 
+                                            <ol> 
+                                                <li><b>Content</b> — the actual content (text, image, etc.);</li> 
+                                                <li><b>Padding</b> — the inner space between the content and the border of the box;</li> 
+                                                <li><b>Border</b> — the border of the box (visible or not);</li> 
+                                                <li><b>Margin</b> — the outer space between the box and other elements.</li> 
+                                            </ol> 
+                                        <p>These four parts form the visual structure and behaviour of the element in relation to the layout.</p>
+
+                                        <p>The structure of an element in the box model is as folllows:</p>
+                                        <pre> 
+╔════════════════════════════════════════╗  ← margin
+║  ┌──────────────────────────────────┐  ║
+║  │          padding                 │  ║
+║  │  ┌────────────────────────────┐  │  ║
+║  │  │         content            │  │  ║
+║  │  └────────────────────────────┘  │  ║
+║  └──────────────────────────────────┘  ║
+╚════════════════════════════════════════╝  ← border
+
+                                        </pre> 
+                                        
+                                        <p><strong>Padding</strong> moves the content away from inner border. <strong>Margin</strong> on the oher hand, separates the element from other elements on the page. The <strong>border</strong> can have colour, thickness, and style, or it may not appear at all, but it always exists logically.</p>
+
+                                        <p>And to style these elements, we use CSS properties as shown in the example below:</p>
+
+                                        <pre>
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 30px;
+}
+                                        </pre>
+
+                                        <p>In this example, the element will have:</p> 
+                                        <ul> 
+                                            <li>200px of width for the content only;</li> 
+                                            <li>20px of inner space (padding);</li> 
+                                            <li>A 2px border around the box;</li> 
+                                            <li>30px of distance from external elements (margin).</li> 
+                                        </ul>
+
+                                    </div>
+
+                    <section id="js">
+                        <h2>JavaScript ✶⋆.˚</h2>
+                            
+                            <h3>Introduction to JS</h3>
+                                <h4>What is JavaScript?</h4>
+
+                                    <p>JavaScript is an intrepreted, object-oriented programming language mainly used in web development to make pages interactive and dynamic. Alongside HTML and CSS, it forms the foundation for building interfaces on the web.</p> 
+                                    <p>It was originally created to run in the browser and allow HTML pages to respond to user actions, such as clicks, form inputs, animations, and real-time content changes.</p>
+                                    
+                                    <p>Without JavaScript, a page is purely static, meaning it only displays content but does react to anything.</p>
+
+                                <h4>What is it used for?</h4>
+
+                                    <p>JavaScript is used to add behaviour to web pages. With it, the following is possible: <p> 
+                                    <ul> 
+                                        <li>Manipulate HTML elements and change their content, appearance, or structure (DOM);</li> 
+                                        <li>Respond to user events (such as clicks, scrolling, or typing);</li> 
+                                        <li>Validate forms before they are sent to the server;</li> 
+                                        <li>Control the programme flow using conditions and loops;</li> 
+                                        <li>Temporaarily store data in the browser (g.g., localStorage);</li> 
+                                        <li>Make requests to servers without reloading the page (AJAX);</li> 
+                                        <li>Create animations and dynamic.</li> 
+                                    </ul>       
+                                    
+                                
+                            <h3>How JS work in the browser</h3>
+                                
+                                <h4>Where is JS executed?</h4>
+
+                                    <p>In the context of the web, JavaScript is executed directly by the user's browser (such as Chrome, Firefox, or Edge). These browsers have built-in engines - called "JavaScript engines" (such as V8 in Chrome) - which interpret and run the code in real time.</p> 
+                                    <p>This means JS does not require installation or prior compilation to work: a browser is enough. When a page containing JavaScript is opened, the browser processes the code and executes it automatically.</p>
+                                    
+                                    <p>Today, JavaScript can also run outside the browser (such as with Node.js), but it's most common use is still on the front-end.</p>
+
+                                
+                                <h4>Loading and running JavaScript</h4>
+
+                                    <p>JavaScript works by interpreting and executing code directly in the user's browser. It can be included in an HTML document in the three main ways:</p>
+                                    <ol>
+                                        <li><b>Inline:</b> Adding JS code directly in an HTML tga using the onclick attribute, for example.</li>
+                                            <pre>
+    &lt;button onclick="alert('Hello!')"&gt;Click here&lt;/button&gt;
+                                            </pre>
+                                        <li><b>Internal:</b> Including a script block within the &lt;head&gt; or &lt;body&gt; tag of the HTML.</li>
+                                            <pre>
+    &lt;head&gt;
+        &lt;script&gt;
+            function showAlert() {
+                alert('Hello!');
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+                                            </pre>
+                                        <li><b>External:</b> Creating a separate JS file and linking it to the HTML.</li>
+                                            <pre>
+    &lt;head&gt;
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+                                            </pre>      
+                                    </ol>
+
+                                    <p>The most recommended approach is the external one, as it allows separating the content (HTML) from the logic (JavaScript), making the code easier to maintain and reuse.</p>
+
+                                    <h4>Interaction with HTML and CSS</h4>
+                                        <p>JavaScript connects to HTML and CSS through the <b>DOM</b> (Document Object Model), a tree-like representation of the page structure.</p> 
+                                        <p>With it, you can::</p> 
+                                        <ul> 
+                                            <li>Select element on the page (`document.querySelector`, `getElementById`, etc.);</li> 
+                                            <li>Change content and attributes (`element.innerText`, `element.setAttribute`);</li> 
+                                            <li>Modify styles directly(`element.style.color = "red"`);</li> 
+                                            <li>Add or remove CSS classes;</li> 
+                                            <li>Insert, move or remove elements from the page.</li> 
+                                        </ul>
+                                    
+                               
+                            <h3>Variable and data types </h3>
+
+                                <p>In JS, variables are used to store values and can be declared using the keywords var, let, or const. Each has its own characteristics:</p>
+                                <ul>
+                                    <li><b>var:</b> Declares a variable with global or function scope. Can be reassisned and redeclared.</li>
+                                    <li><b>let:</b> Declares a variable with block scope. Can be reassigned, but not redeclared in the same scope.</li>
+                                    <li><b>const:</b> Declares a constant, whose value cannot be reassigned. Also has block scope.</li>
+                                </ul>
+
+                                <p>Example of variables declaration:</p>
+                                    <pre>
+    var name = 'João';
+    let age = 30;
+    const pi = 3.14;
+                                    </pre>
+
+                            <h3>The most common data types in JavaScript include</h3>
+                                    <ul>
+                                        <li><b>String:</b> Text, enclosed in single or double quotes (e.g., 'Hello', 'Word');</li>
+                                        <li><b>Number:</b> Integers or decimals (e.g., 42, 3.14);</li>
+                                        <li><b>Boolean:</b> Logical values true or false;</li>
+                                        <li><b>Array:</b> List of values, enclosed in square brackets (e.g., [1, 2, 3], ['apple', 'banana']);</li>
+                                        <li><b>Object:</b> Key-values structure, enclosed in curly braces (e.g., { name: 'João', age: 30 });</li>
+                                        <li><b>Null:</b> Null value;</li>
+                                        <li><b>Undefined:</b> Underfined vallue.</li>
+                                        </ul>
+
+                            <h3>Operators</h3>
+
+                                <h4>Arithmetic Operators</h4>
+                                    <p>Used to perform mathematical operations:</p>
+                                    <ul>
+                                        <li><b>+</b> (addition)</li>
+                                        <li><b>-</b> (subtraction)</li>
+                                        <li><b>*</b> (multiplication)</li>
+                                        <li><b>/</b> (division)</li>
+                                        <li><b>%</b> (modulo, remainder of division)</li>
+                                    </ul>
+                                
+                                <h4>Comparison Operators</h4>
+                                    <p>Used to compare values and return either true or false:</p>
+                                    <ul>
+                                        <li><b>==</b> (equality)</li>
+                                        <li><b>!=</b> (inequality)</li>
+                                        <li><b>===</b> (strict equality, compares value and type)</li>
+                                        <li><b>!==</b> (strict inequality, compares value and type)</li>
+                                        <li><b>&gt;</b> (greater than)</li>
+                                        <li><b>&lt;</b> (less than)</li>
+                                        <li><b>&gt;=</b> (greater than or equal to)</li>
+                                        <li><b>&lt;=</b> (less than or equal to)</li>
+                                    </ul>   
+
+                                <h4>Logical Operators</h4>
+                                    <p>Used to combine boolean expressions:</p>
+                                    <ul>
+                                        <li><b>&amp;&amp;</b> (logical AND, returns true if both expressions are true)</li>
+                                        <li><b>||</b> (logical OR, returns true if at least one expression is true)</li>
+                                        <li><b>!</b> (logical NOT, inverts the bollean value)</li>
+                                    </ul>   
+
+                            <h3>Control Structures</h3>
+
+                                <p>Control structure are used to control the flow of code execution, allowing decisions and repetition. The main control structures in JavaScript are:</p>
+                                <ul>
+                                    <li><b>if...else:</b> A conditional that executes one block of code if a condition is true, and another block if it is false.</li>
+                                    <li><b>switch:</b>A conditional structure that compares an expression with multiple possible cases.</li>
+                                    <li><b>for:</b>A loop that iterates over a block of code a specific number of times.</li>
+                                    <li><b>while:</b>A loop that runs a block of code while a condition is true.</li>
+                                    <li><b>do...while:</b>Similar to while, but guarantees the block will run at least onde before checking the condition.</li>
+                                </ul> 
+                    </section>
+                    
+                    <h2>Conclusion ✶⋆.˚</h2>
+
+                        <p>HTML, CSS and JavaScript are the three fundamental technologies for web development. HTML structures the content, CSS styles the presentation, and JavaScript adds interactivity. Together, they enable the creation of dynamic, responsive, and visually, appealing web pages.</p>
+                        
+                        <p>These are my initial studies, as someone whose native language is not English and who has only recently started learning. Assuch, there may be mistakes or omissions. If you notice any errors, please feel free to let me know so I can correct them.</p>
+                        
+                        <p>If you're interested in this topic, I recommend the courses offered by Programaria. They are excellent for beginners and also offer scholarship programmes. Please note that the courses are taught in Portuguese.</p> 
+                        <p>You can find more information on their website: <a href="https://www.programaria.org/" target="_blank">Programaria</a></p>
+
+                <h2>References ✶⋆.˚</h2>
+                    <div class="ref">
+                        <ul>
+                            <li><a href="https://www.programaria.org/cursos-programaria/front-end-primeira-pagina-web/" target="_blank">Front-End | Minha primeira página web</a></li>
+                            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+                            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">MDN Web Docs - CSS</a></li>
+                            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a></li>
+                            <li><a href="https://www.programaria.org/o-que-e-programar/?_gl=1*1cudue7*_ga*MTQ4NDU1MTA1LjE3NDU5MzYzMDY.*_ga_CWF88KQ9ZH*czE3NTA3ODcwNTYkbzQwJGcwJHQxNzUwNzg3MDU2JGo2MCRsMCRoMA"target="_black">O que, afinal de contas, é programar?</a></li>
+                            <li><a href="https://tableless.github.io/iniciantes/manual/css/index.html" target="_black">What is CSS?</a></li>
+                            <li><a href="https://tableless.github.io/iniciantes/manual/html/index.html" target="_black">What is HTML?</a></li>
+                            <li><a href="https://tableless.github.io/iniciantes/" target="_black">Getting Started | Um guia para iniciantes na área de web.</a></li>
+                            <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Scripting/Conditionals" target="_blank">Making decisions in your code — conditionals</a></li>
+                        </ul>
+                    </div>
+
+                        <p class="thankyou">Thank you for reading this far! Please leave you feedback below:</p>
+
+                        <form class="form" id="form">
+                        
+                            <label for="name">Name:</label>
+                            <input id="name" name="name" type="text" required>
+
+                            <label for="email">E-mail (optional):</label>
+                            <input id="email" name="_replyto" type="email">
+
+                            <label for="feedback">Feedback:</label>
+                            <textarea id="feedback" name="message" required></textarea>
+
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <button id="sendButton" type="submit">Send:</button>
+                            
+                        </form>
+
+                        <p id="menssageSent" style="display: none; color: lightblue;">Feedback successfully sent!</p>
+
+            </article>
+        </div>
+        <script src="js/summary.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

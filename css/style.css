@@ -1,0 +1,433 @@
+body {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0c1624;
+    color: #C9D1D9;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;    
+    overflow-x: hidden;
+}
+
+ul li,
+ol li {
+    margin-bottom: 14px;
+}
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto;  
+    text-align: justify;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 4rem 0;
+}
+
+.main a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #C9D1D9;
+    margin: 4rem 0;
+}
+
+.main a:hover{
+    text-decoration: underline;
+    color: #8fbbf7;
+}
+
+.summary {
+    border: 1px solid #ccc;
+    padding: 2rem;
+    width: auto;
+    border-radius: 30px;
+    margin: 3rem 0;
+    background-color: #1a2433;
+    min-height: 300px;
+}
+
+#summary-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#summary-list li {
+    margin: 4px 0px;
+}
+
+#summary-list li::before {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+#summary-list li.nivel-h2 > a {
+    color: #88a0c2;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#summary-list li.nivel-h2 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+#summary-list li.nivel-h2::before {
+  content: "✦";
+  margin-top: 0.5rem;
+}
+
+#summary-list li.nivel-h3 {
+  padding-left: 1.5rem;
+}
+
+#summary-list li.nivel-h3::before {
+  content: "⏾";
+  font-family: Arial, sans-serif;
+  color: #aecffc;
+  margin-right: 0.5rem;
+}
+
+#summary-list li.nivel-h4 {
+  padding-left: 2.5rem;
+}
+
+#summary-list li.nivel-h4::before {
+  content: "₊⊹";
+  color: #4a8eed;
+}
+
+#summary-list li.nivel-h5 {
+  padding-left: 60px;
+}
+
+#summary-list li.nivel-h5::before {
+  content: "☁︎";
+  color: #6ea7ff;
+  margin-right: 10px;
+}
+
+h1 {
+    font-size: 5.3rem;
+    font-weight: 300;
+    color: #F0F6FC;
+    font-family: Pompiere, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color: #58A6FF;
+    font-size: 2.8rem;
+    font-family: 'Montserrat Alternates', serif;
+}
+
+h3 {
+    color: #4b7bbf;
+    font-size: 1.9rem;
+    font-style: bold;
+}
+
+h4 {
+    color: #284a79;
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: #224a99;
+}
+
+[class^='part'] {
+    margin-bottom: 4.5rem;
+}
+
+[class^="list"] {
+    line-height: 1.6;
+    margin: 10px;
+}
+
+.part_quote {
+    margin: 90px 0px;
+    color: #aebed6;
+    text-align: justify;
+}
+
+#contentjs {
+    min-height: 100vh;
+}
+
+#contentjs h2 {
+    margin-top: 60px;
+}
+
+#contentjs h3 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+#contentjs p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+#contentjs h2:not(:first-child) {
+  margin-top: 80px; 
+}
+
+.part10 li{
+    list-style-type: none
+}
+
+.part10 li::before {
+    content: "↳";
+    color: #4a8eed;
+    margin-right: 7px;
+}
+
+li::marker {
+    color: #8ca1bf;
+}
+
+pre {
+    color: #415c82;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.linkhtml a:hover,
+.ref a:hover,
+.elementshtml a:hover {
+    text-decoration: underline;
+    color: #8fbbf7;
+}
+
+.linkhtml li,
+.ref li,
+.elementshtml li {
+    list-style-type: none;
+}
+
+.linkhtml li::before,
+.ref li::before,
+.elementshtml li::before {
+    content: "⌯⌲";
+    margin-right: 10px;
+    color: #8ca1bf;
+}
+
+.linkhtml a,
+.ref a,
+.elementshtml a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #b6cef0;
+    margin: 0;
+    line-height: 1.7;
+}
+
+p a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #b6cef0;
+    margin: 0;
+    line-height: 1.7;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #8fbbf7;
+}
+
+.thankyou {
+  margin-top: 70px;
+  font-weight: bold;
+  text-align: center;
+}
+
+form {
+    text-align: center;
+    font-weight: bold;
+    color: #8ca1bf;
+    font-size: 1.1rem;
+}
+
+.form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #1a2433;
+  border-radius: 8px;
+  color: #C9D1D9;
+  box-sizing: border-box;
+}
+
+.form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.form input,
+.form textarea,
+.form button {
+  width: 100%;
+  min-width: 44px;
+  padding: 10px 12px;
+  margin-top: 0.4rem;
+  border: 1px solid #888;
+  border-radius: 6px;
+  background-color: #8ca1bf;
+  color: #f1f1f1;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #8fbbf7;
+  background-color: #3d87f5;
+}
+
+.form button {
+  margin-top: 1.5rem;
+  margin-bottom: 10px;
+  background-color: #41526b;
+  border: none;
+  color: #1e1e1e;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #5da7f0;
+}
+
+.form input,
+.form textarea,
+.form button {
+  font-family: inherit; 
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 0.4rem;
+  border: 1px solid #888;
+  border-radius: 6px;
+  background-color: #8ca1bf;
+  color: #f1f1f1;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+    }
+
+    ul li,
+    ol li {
+        margin-bottom: 10px;
+    }
+
+    .content
+ {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .header {
+        font-size: 1rem;
+        margin: 2rem 0;
+    }
+
+    .main a {
+        font-size: 1rem;
+    }
+
+    .summary {
+        padding: 1rem;
+        margin: 2rem 0;
+    }
+
+    #summary-list li.nivel-h2 > a {
+        font-size: 1rem;
+    }
+
+    #summary-list li.nivel-h3::before {
+        content: "☾";
+        font-family: Arial, sans-serif;
+        color: #aecffc;
+        margin-right: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    .part_quote {
+        margin: 50px 0;
+        padding: 0 10px;
+        font-size: 1rem;
+    }
+
+    [class^='part'] {
+        margin-bottom: 2.5rem;
+    }
+
+    [class^="list"] {
+        margin: 6px;
+        font-size: 1rem;
+    }
+
+    #content
+js h2, 
+    #content
+js h3 {
+        margin-top: 2rem;
+    }
+
+    pre {
+        font-size: 0.9rem;
+    }
+
+    p a { 
+        font-size: 1rem;
+    }
+
+    form {
+        font-size: 1rem;
+    }
+
+    .form {
+        padding:1rem;
+        margin: 1rem;
+    }
+
+    .form input,
+    .form textarea,
+    .form button {
+        font-size: 0.9rem;
+    }
+
+    .thankyou {
+        margin-top: 40px;
+        font-size: 1rem;
+}}
